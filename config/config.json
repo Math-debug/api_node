@@ -1,3 +1,6 @@
 {
-    "token":"mmttusxaviergomes1285!@"
+    "token":"mmttusxaviergomes1285!@",
+    "host":"localhost",
+    "user":"root",
+    "passwd":""
 }
