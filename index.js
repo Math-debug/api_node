@@ -1,8 +1,5 @@
-var express = require('express')
-var app = express();
-
-app.get('/teste', function (req, res) {
-  res.send('hello world')
-})
-
-app.listen(3000)
+const express = require('express');
+const app = express();
+const router = require('./controllers/router');
+app.use('/',router);
+app.listen(3000);
