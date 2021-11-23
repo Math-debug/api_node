@@ -1,6 +1,6 @@
 const db = require('./db/db');
 
-class Controller{
+class Rules{
     constructor(json){
         this.json = json;
     }
@@ -22,4 +22,4 @@ async CreateProdutos(){
         return res;
     }
 }
-module.exports = Controller;
+module.exports = Rules;
