@@ -1,7 +1,15 @@
 const router = require('express').Router();
-const rules = require('../model/rules');
+const Controller = require('../model/rules');
+
 router.get('/produtos', function (req, res) {
-  let send = rules.Controller.getProdutos(true)
-  res.send(send)
+  let obj = new Controller(true);
+  let send = obj.getProdutos();
+  res.send(send);
+})
+router.post('/produtos', function (req, res) {
+  console.log(req.body);
+  let obj = new Controller(true,req.body);
+  let send = obj.CreateProdutos();
+  res.send(send);
 })
 module.exports = router;

@@ -4,4 +4,9 @@ const sequelize = new Sequelize('T2lipa',config.user,config.passwd,{
     dialect:'mysql',
     host: config.host
 });
+sequelize.authenticate().then(function(){
+    console.log("Conexao com o banco efetuada");
+  }).catch(function(error){
+    console.log("error: "+error);
+});
 module.exports = sequelize;
